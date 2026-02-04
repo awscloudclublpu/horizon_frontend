@@ -47,8 +47,8 @@ export default function ScheduleSection() {
               {workshopSchedule.map((item, index) => (
                 <div key={index} className="flex gap-4 group">
                   <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 bg-red-950/30 rounded-full flex items-center justify-center group-hover:bg-red-600 transition-colors border border-red-900/50">
-                      <i className={`${item.icon} text-red-600 group-hover:text-white`}></i>
+                    <div id = "Changed" className="w-10 h-10 min-w-10 min-h-10 bg-red-950/30 rounded-full flex items-center justify-center group-hover:bg-red-600 transition-colors border border-red-900/50">
+                      <i className={`${item.icon} text-sm text-red-600 group-hover:text-white`}></i>
                     </div>
                     {index < workshopSchedule.length - 1 && (
                       <div className="w-0.5 h-full bg-red-400/20 my-2"></div>
@@ -77,10 +77,10 @@ export default function ScheduleSection() {
               {ctfSchedule.map((item, index) => (
                 <div key={index} className={`flex gap-4 group ${item.highlight ? 'bg-amber-400/10 -mx-4 px-4 py-2 rounded-lg' : ''}`}>
                   <div className="flex flex-col items-center">
-                    <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors border ${
+                    <div className={`w-10 h-10 min-w-10 min-h-10 rounded-full flex items-center justify-center transition-colors border ${
                       item.highlight ? 'bg-red-600 animate-pulse border-red-500' : 'bg-red-950/30 group-hover:bg-red-600 border-red-900/50'
                     }`}>
-                      <i className={`${item.icon} ${item.highlight ? 'text-white' : 'text-red-600 group-hover:text-white'}`}></i>
+                      <i className={`${item.icon} text-sm ${item.highlight ? 'text-white' : 'text-red-600 group-hover:text-white'}`}></i>
                     </div>
                     {index < ctfSchedule.length - 1 && (
                       <div className="w-0.5 h-full bg-amber-400/20 my-2"></div>
